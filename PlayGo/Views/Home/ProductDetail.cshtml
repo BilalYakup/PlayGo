@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "ProductDetail";
+}
+@model ProductDetailVM
+<input type="hidden" asp-for="Id"/>
+<input type="hidden" asp-for="Image" />
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="~/images/products/@Model.Image" class="img-responsive" alt="@Model.Name">
+                <div class="card-container">
+                    <div class="text-center">
+                        <h1 class="h2">@Model.Name</h1>
+                    </div>
+                    
+                        <p >@Model.Description</p>
+                        <p>Durumu : @Model.Status</p>
+                        <p>Kategorisi : @Model.CategoryName</p>
+                        <small class="pull-right">Fiyat : @Model.UnitPrice TL</small>
+                   
+                </div>
+            </div>
+
+
+
+            <div class="col-md-8 col-md-offset-2 section-container-spacer">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <img src="~/images/products/@Model.Image" class="img-responsive" alt="@Model.Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-container-spacer text-center">
+                    <h1 class="h2">Takip Et</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form action="" class="reveal-content">
+                            <div class="row">
+                                <div class="col-md-5 address-container">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="fa-icon">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            (055) 555 55 55
+                                        </li>
+                                        <li>
+                                            <span class="fa-icon">
+                                                <i class="fa fa-at" aria-hidden="true"></i>
+                                            </span>
+                                            e-mail@mail.io
+                                        </li>
+                                    </ul>
+                                    <h3>Follow me on social networks</h3>
+                                    <a href="http://www.facebook.com" title="" class="fa-icon">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="http://www.twitter.com" title="" class="fa-icon">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="http://www.linkedin.com" title="" class="fa-icon">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer-container text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>© UNTITLED | Website created with </p>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            navActivePage();
+        });
+    </script>
+    <script type="text/javascript" src="~/main.70a66962.js"></script>

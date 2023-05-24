@@ -1,0 +1,117 @@
+﻿@model List<CategoryListVM>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="carousel slide projects-carousel">
+                    <!-- Carousel items -->
+
+                    <div class="carousel-inner">
+                        
+                            <div class="item active">
+                            
+                                <div class="row">
+                                @foreach (var categories in Model)
+                                {
+                                    <div class="col-sm-4">
+
+                                        <a asp-area="" asp-controller="Home" asp-action="ProductList" title="" class="black-image-project-hover">
+                                            <img src="~/images/categories/@categories.Image" alt="@categories.Name" class="img-responsive">
+                                        </a>
+                                        <div class="card-container card-container-lg">
+                                            <h3>@categories.Name</h3>
+                                        </div>
+                                    </div>
+
+
+                                }
+
+                                </div>
+                                <!--/row-->
+                            
+                            </div>
+                        
+                    </div>
+
+                </div>
+
+
+
+                <!--/myCarousel-->
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-container-spacer text-center">
+                    <h1 class="h2">Takip Et</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form action="" class="reveal-content">
+                            <div class="row">
+                                <div class="col-md-5 address-container">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="fa-icon">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            (055) 555 55 55
+                                        </li>
+                                        <li>
+                                            <span class="fa-icon">
+                                                <i class="fa fa-at" aria-hidden="true"></i>
+                                            </span>
+                                            e-mail@mail.io
+                                        </li>
+                                    </ul>
+                                    <h3>Follow me on social networks</h3>
+                                    <a href="http://www.facebook.com" title="" class="fa-icon">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="http://www.twitter.com" title="" class="fa-icon">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="http://www.linkedin.com" title="" class="fa-icon">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer-container text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>© UNTITLED | Website created with </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+    });
+</script>
+<script type="text/javascript" src="~/main.70a66962.js"></script>

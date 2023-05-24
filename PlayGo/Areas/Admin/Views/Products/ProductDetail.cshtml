@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+@model ProductDetailVM
+
+
+<input type="hidden" asp-for="Id"/>
+<input type="hidden" asp-for="Image" />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    @if (Model.Image == null)
+                    {
+                        <img src="~/images/noimage.jpg" width="100" alt="@Model.Name" />
+                    }
+                    else
+                    {
+                        <img src="~/images/products/@Model.Image" class="card-img-top" alt="@Model.Name" />
+                    }
+
+                </div>
+                <div class="card-body">
+                    <div><h2>@Model.Name</h2></div>
+                    <div><h4>@Model.Description</h4></div>
+                    <div><h4>@Model.UnitPrice TL</h4></div>
+                    <div><h4>@Model.CreatedDate Tarihinde eklenmiştir</h4></div>
+                    <div><h4>@Model.Status</h4></div>
+                    <div><h4>@Model.CategoryName</h4></div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Index" asp-controller="Products" class="btn btn-outline-info btn-sm float-start">Geri Dön</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
